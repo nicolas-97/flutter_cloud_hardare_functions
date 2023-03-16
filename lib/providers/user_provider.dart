@@ -33,8 +33,6 @@ class UserProvider extends ChangeNotifier {
       headers: _headers
     );
 
-    print(response.statusCode);
-
     if(response.statusCode == 200){
 
       Response data = Response.fromJson(json.decode(response.body));
@@ -57,11 +55,21 @@ class UserProvider extends ChangeNotifier {
 
     Uri url = Uri.http(_domain, '/v1/user/sign-up');
 
-    final response = await http.post(url, body: user);
+    final response = await http.post(
+      url, 
+      body: json.encode(user),
+      headers: _headers
+    );
 
-    Response data = Response.fromJson(json.decode(response.body));
+    if(response.statusCode == 201){
 
-    userCreated = data.data!;
+      Response data = Response.fromJson(json.decode(response.body));
+      userCreated = data.data!;
+      error = BadResponse();
+
+    }else{
+      error = BadResponse.fromJson(json.decode(response.body));
+    }
 
     notifyListeners();
 

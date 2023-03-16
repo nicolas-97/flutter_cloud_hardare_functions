@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_many_functions/providers/user_provider.dart';
+import 'package:flutter_many_functions/screens/create_account.dart';
 import 'package:flutter_many_functions/screens/home.dart';
 import 'package:provider/provider.dart';
 
@@ -24,7 +25,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       initialRoute: '/',
       routes: {
-        '/' : (context) => const Home()
+        '/' : (context) => const Home(),
+        '/create-account' : (context) => const CreateAccount(),
       },
     );
   }

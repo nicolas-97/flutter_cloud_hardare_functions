@@ -82,6 +82,10 @@ class _HomeState extends State<Home> {
                   ],
                 ),
               ),
+            ),
+            TextButton(
+              child: const Text('Create account'),
+              onPressed: () => Navigator.pushNamed(context, '/create-account'),
             )
           ],
         ),
