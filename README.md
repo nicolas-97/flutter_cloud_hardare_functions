@@ -1,16 +1,12 @@
-# flutter_many_functions
+# FLutter project segundo corte
 
-A new Flutter project.
+Un proyecto que muestra como implementar distintas funcionalidades tanto de hardware como de nube
 
-## Getting Started
+## Paquetes necesarios
 
-This project is a starting point for a Flutter application.
+- [provider: ^6.0.5](https://pub.dev/packages/provider)
+- [http: ^0.13.5](https://pub.dev/packages/http)
 
-A few resources to get you started if this is your first Flutter project:
+## Documentación
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [Documentación online flutter](https://docs.flutter.dev/)
